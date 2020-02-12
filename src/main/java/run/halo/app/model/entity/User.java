@@ -69,6 +69,20 @@ public class User extends BaseEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date expireTime;
 
+    @Column(name = "gender", columnDefinition = "int default 0")
+    private String gender;
+
+    @Column(name = "country", columnDefinition = "varchar(1024) default ''")
+    private String country;
+
+    @Column(name = "province", columnDefinition = "varchar(1024) default ''")
+    private String province;
+
+    @Column(name = "city", columnDefinition = "varchar(1024) default ''")
+    private String city;
+
+    @Column(name = "admin", columnDefinition = "bit(1) default 0")
+    private boolean isAdmin;
 
     @Override
     public void prePersist() {

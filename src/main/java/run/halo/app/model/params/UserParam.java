@@ -43,4 +43,6 @@ public class UserParam implements InputConverter<User> {
     @Size(max = 1023, message = "用户描述的字符长度不能超过 {max}", groups = {CreateCheck.class, UpdateCheck.class})
     private String description;
 
+    private boolean isAdmin;
+
 }

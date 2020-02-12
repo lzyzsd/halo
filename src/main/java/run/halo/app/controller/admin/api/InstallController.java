@@ -194,6 +194,7 @@ public class InstallController {
     }
 
     private User createUser(InstallParam installParam) {
+        installParam.setAdmin(true);
         // Get user
         return userService.getCurrentUser().map(user -> {
             // Update this user
