@@ -22,7 +22,7 @@ import java.lang.reflect.ParameterizedType;
 public abstract class BaseCommentParam<COMMENT> implements InputConverter<COMMENT> {
 
     @NotBlank(message = "评论者昵称不能为空")
-    @Size(max = 50, message = "评论者昵称的字符长度不能超过 {max}")
+    @Size(max = 100, message = "评论者昵称的字符长度不能超过 {max}")
     private String author;
 
     @NotBlank(message = "邮箱不能为空")
@@ -30,12 +30,11 @@ public abstract class BaseCommentParam<COMMENT> implements InputConverter<COMMEN
     @Size(max = 255, message = "邮箱的字符长度不能超过 {max}")
     private String email;
 
-    @Size(max = 127, message = "评论者博客链接的字符长度不能超过 {max}")
+    @Size(max = 2048, message = "评论者博客链接的字符长度不能超过 {max}")
     @URL(message = "博客链接格式不正确")
     private String authorUrl;
 
     @NotBlank(message = "评论内容不能为空")
-    @Size(max = 1023, message = "评论内容的字符长度不能超过 {max}")
     private String content;
 
     @Min(value = 1, message = "Post id must not be less than {value}")

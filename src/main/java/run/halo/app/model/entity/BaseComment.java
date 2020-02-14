@@ -30,7 +30,7 @@ public class BaseComment extends BaseEntity {
     /**
      * Commentator's name.
      */
-    @Column(name = "author", columnDefinition = "varchar(50) not null")
+    @Column(name = "author", columnDefinition = "varchar(1024) not null")
     private String author;
 
     /**
@@ -48,7 +48,7 @@ public class BaseComment extends BaseEntity {
     /**
      * Commentator's website.
      */
-    @Column(name = "author_url", columnDefinition = "varchar(512) default ''")
+    @Column(name = "author_url", columnDefinition = "varchar(2048) default ''")
     private String authorUrl;
 
     /**
@@ -60,7 +60,7 @@ public class BaseComment extends BaseEntity {
     /**
      * Comment content.
      */
-    @Column(name = "content", columnDefinition = "varchar(1023) not null")
+    @Column(name = "content", columnDefinition = "text not null")
     private String content;
 
     /**

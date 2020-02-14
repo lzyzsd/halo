@@ -39,8 +39,6 @@ import java.util.stream.Collectors;
 @Service
 public class PostCommentServiceImpl extends BaseCommentServiceImpl<PostComment> implements PostCommentService {
 
-    private final PostCommentRepository postCommentRepository;
-
     private final PostRepository postRepository;
 
     public PostCommentServiceImpl(PostCommentRepository postCommentRepository,
@@ -49,7 +47,6 @@ public class PostCommentServiceImpl extends BaseCommentServiceImpl<PostComment> 
                                   OptionService optionService,
                                   ApplicationEventPublisher eventPublisher) {
         super(postCommentRepository, optionService, userService, eventPublisher);
-        this.postCommentRepository = postCommentRepository;
         this.postRepository = postRepository;
     }
 
