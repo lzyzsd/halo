@@ -17,9 +17,7 @@
     <#include "social-list.ftl">
     <div class="footer">
         <a target="_blank" href="#">
-            <#-- 不允许修改该主题信息，也不能删除。 -->
-            <span>Designed by </span>
-            <a href="https://www.caicai.me">CaiCai</a>
+            <span>网站备案：沪ICP备20003233号-1</span>
             <div class="by_halo">
                 <a href="https://github.com/halo-dev/halo" target="_blank">Proudly published with Halo&#65281;</a>
             </div>
