@@ -17,7 +17,6 @@ import java.util.Date;
 @Data
 @ToString
 @MappedSuperclass
-@EqualsAndHashCode
 public class BaseEntity {
 
     /**

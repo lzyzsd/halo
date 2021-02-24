@@ -1,7 +1,6 @@
 package run.halo.app.model.entity;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -12,8 +11,9 @@ import java.util.Objects;
  * @author ryanwang
  * @date 2019-03-12
  */
-@Data
 @Entity
+@Getter
+@Setter
 @Table(name = "post_tags")
 @ToString(callSuper = true)
 public class PostTag extends BaseEntity {
