@@ -98,6 +98,10 @@ dependencies {
     implementation "com.vladsch.flexmark:flexmark-ext-yaml-front-matter:$flexmarkVersion"
     implementation "com.vladsch.flexmark:flexmark-ext-gitlab:$flexmarkVersion"
     implementation "com.vladsch.flexmark:flexmark-html-parser:$flexmarkVersion"
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation "cn.edu.hfut.dmic.webcollector:WebCollector:2.73-alpha"
+    implementation "org.seleniumhq.selenium:selenium-java:3.4.0"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.11.1"
 
     implementation "net.coobird:thumbnailator:$thumbnailatorVersion"
     implementation "net.sf.image4j:image4j:$image4jVersion"

@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import run.halo.app.repository.base.BaseRepositoryImpl;
+import run.halo.app.utils.TradeCrawlerUtils;
 
 /**
  * Halo main class.
@@ -31,8 +32,9 @@ public class Application extends SpringBootServletInitializer {
         // Customize the spring config location
         System.setProperty("spring.config.additional-location", "file:${user.home}/.halo/,file:${user.home}/halo-dev/");
 
+        TradeCrawlerUtils.doRequest();
         // Run application
-        context = SpringApplication.run(Application.class, args);
+//        context = SpringApplication.run(Application.class, args);
     }
 
     /**
